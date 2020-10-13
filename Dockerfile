@@ -14,7 +14,5 @@ RUN apt-get update && \
 COPY . .
 
 EXPOSE 2948
-EXPOSE 49194
 
-#ENTRYPOINT [ "python", "/usr/bin/gpsfake", "-P", "2948" "-t", "-c 1", "-l", "-D4", "kras-en.nmea" ]
 ENTRYPOINT ["python2", "/usr/bin/gpsfake", "-P", "2948", "-t", "-c 1", "-l", "-D4", "kras-en.nmea"]
